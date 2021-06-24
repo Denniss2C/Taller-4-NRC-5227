@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/bootstrap.bundle.min.js"></script>
+</head>
+<body onload="imprimir()" class="container">
+    <header>
+        <h1>Uso de arreglos de OBJETOS en JavaScript</h1>
+    </header>
+    <hr>
+    <div class="row">
+        <h2>Liga Deportiva Cantonal de Pujilí</h2>
+        <div class="col-4">
+            <ul><li><h3>Inscripcion de Deportistas</h3></li></ul>
+            <!--Formulario emulado (sin usar la etiqueta form)-->  
+            <fieldset class="mb-3">
+                <div class="mb-3">
+                    <span class="input-group-text" id="addon-wrapping">Disciplina: </span>
+                    <select id="slDisciplina" class="form-select" aria-label="Disabled select example">
+                        <option value="0" selected>--Seleccione--</option>
+                        <option value="Atletismo">Atletismo</option>
+                        <option value="Boxeo">Boxeo</option>
+                        <option value="Lucha Olímpica">Lucha Olímpica</option>
+                        <option value="Levantamineto de Pesas">Levantamineto de Pesas</option>
+                        <option value="Karate Do">Karate Do</option>
+                        <option value="Taekwondo">Taekwondo</option>
+                    </select>
+                </div>
+                <div class="mb-3">
+                    <span class="input-group-text" id="addon-wrapping">Nombre: </span>
+                    <input type="text" class="form-control" name="txtNombre" id="txtNombre" placeholder="Ingrese Nombre">
+                </div>
+                <div class="mb-3">
+                    <span class="input-group-text" id="addon-wrapping">Cedula: </span>
+                    <input type="number" class="form-control" name="txtCedula" id="txtCedula" placeholder="Ingrese No_ Cedula" maxlength="10">
+                </div>
+                <div class="mb-3">
+                    <span class="input-group-text" id="addon-wrapping">Edad: </span>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" name="txtEdad" id="txtEdad" min="5" placeholder="Minimo 5 años">
+                        <span class="input-group-text" id="basic-addon2">años</span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <span class="input-group-text" id="addon-wrapping">
+                        Valor a Pagar: &nbsp;&nbsp;&nbsp;&nbsp;
+                        5-8 años => 2$ <br> 
+                        9-12 años => 4$ <br>
+                        13-16 años => 6$ <br>
+                        17 en adelante => 10$ 
+                    </span>
+                    <div class="input-group mb-3">
+                        <input type="number" class="form-control" name="txtValor" id="txtValor" min="2" max="10" value="0">
+                        <span class="input-group-text" id="basic-addon2">$</span>
+                    </div>
+                </div>
+                <div class="mb-3">
+                    <button onclick="agregar()" type="button" class="btn btn-primary">Agregar</button>
+                </div>
+
+            </fieldset> 
+        </div>
+        <div class="col-2">
+            
+        </div>
+        <div class="col-6">
+            <table class="table table-dark table-striped">
+                <thead>
+                  <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Disciplina</th>
+                    <th scope="col">Nombre</th>
+                    <th scope="col">Cedula</th>
+                    <th scope="col">Edad</th>
+                    <th scope="col">$</th>
+                  </tr>
+                </thead>
+                <tbody id="tblInscripcion">
+                    
+                </tbody>
+                <tfoot>
+                    <tr>
+                        <td colspan="5">Total Recaudado</td>
+                        <td id="tdTotalValor"></td>
+                    </tr>
+                </tfoot>
+              </table>
+        </div>
+    </div>
+    <footer>
+        <script src="js/scrip-index.js"></script>
+    </footer>
+</body>
+</html>
